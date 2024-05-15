@@ -1,6 +1,33 @@
 #root{
  background-color: #212121;
+ background-image: url(./assets/pxfuel.jpg);
+ background-blend-mode:darken;
  height: 150vh;
  width: 100vx;
  overflow-x: hidden;
+}
+
+@font-face {
+    font-family: '3dFont'; /* Use quotes around font names with spaces */
+    src: url('./assets/strenuous 3d.ttf'); /* Proper path to your font file */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/Roboto-Regular.ttf);
+}
+
+.sarc-logo{
+    background-image: url(./assets/sarclogo.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position:absolute;
+    top: 3%;
+    right: 3%;
+}
+
+*{
+    font-family: 'Roboto';
 }

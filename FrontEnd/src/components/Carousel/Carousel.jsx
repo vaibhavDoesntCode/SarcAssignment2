@@ -15,35 +15,19 @@ const Carousel = (data) => {
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000, // Set autoplay speed to 3 seconds
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      }
-    ]
+  
   };
 
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className='random' >
       {data.data.map((event, index) => (
         <div className='carousel-div' key={index}>
+          <div className='sarc-logo' ></div>
 
           <img className='carousel-image'  src={event.image} alt="" width="98%" height="600px" />
           <div className='shadow'></div>
+          <div className='shadow2'></div>
           <h2 className='carousel-name' >{event["name"]}</h2>
           {console.log('qaf',event.name)}
         </div>

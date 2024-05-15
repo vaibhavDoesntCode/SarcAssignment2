@@ -4,6 +4,7 @@ import Carousel from './components/Carousel/Carousel'
 
 function App() {
   const [events, setEvents] = useState([]);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   useEffect(() => {
     fetch('http://127.0.0.1:8000/api/events/')
@@ -19,17 +20,30 @@ function App() {
       console.log(events)
   }, []);
 
+  const handleEventClick = (event) => {
+    setSelectedEvent(event);
+    
+  };
+
+  const handleCloseModal = () => {
+    setSelectedEvent(null);
+    
+  };
+
+
  return(
   <div className='bodyy'>
     <Carousel data={events}  />
+    
     <div className='head'>
-      <h1>Events</h1>
+      <h1 className='heading' >Events  </h1>
+      <div className='horizontal-rule' ></div>
     </div>
     <div className='events-div'>
     {events.map((event) => (
-      <div class="container">
-      <div class="box">
-        <span class="title">{event.name}</span>
+      <div className="container"  key={event.id} onClick={() => handleEventClick(event)}>
+      <div className="box">
+        <span className="title">{event.name}</span>
         <div>
           <strong>{event.date}</strong>
           <p>{event.location}</p>
@@ -39,8 +53,33 @@ function App() {
     </div>
     
 ))}
-      
     </div>
+    {selectedEvent && (
+        <div className="modal" onClick={handleCloseModal} >
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseModal}>
+              &times;
+            </span>
+            <div className='actual-modal-content'>
+            <img width="100%" src={selectedEvent.image} alt="" />
+            <div className='modal-text-content'>
+              <div className='modal-real-text'>
+            <h2>{selectedEvent.name}</h2>
+            <div className='modal-description'>
+              <p><i> {selectedEvent.description}</i></p>
+            </div>
+            </div>
+            <div className='modal-info'>
+            <p> {selectedEvent.date}</p>
+            <p> {selectedEvent.location}</p>
+            <p> {selectedEvent.time}</p>
+            </div>
+            </div>
+            </div>
+            {/* Add more event details here */}
+          </div>
+        </div>
+      )}
 
   </div>
  )
