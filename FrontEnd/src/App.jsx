@@ -27,9 +27,17 @@ function App() {
     </div>
     <div className='events-div'>
     {events.map((event) => (
-      <div className='event' >
-        
+      <div class="container">
+      <div class="box">
+        <span class="title">{event.name}</span>
+        <div>
+          <strong>{event.date}</strong>
+          <p>{event.location}</p>
+          <span>{event.time}</span>
+        </div>
       </div>
+    </div>
+    
 ))}
       
     </div>

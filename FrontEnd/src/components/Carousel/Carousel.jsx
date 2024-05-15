@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import './Carousel.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -40,8 +41,10 @@ const Carousel = (data) => {
     <Slider {...settings}>
       {data.data.map((event, index) => (
         <div className='carousel-div' key={index}>
-          <img src={event.image} alt="" />
-          <h2>{event["name"]}</h2>
+
+          <img className='carousel-image'  src={event.image} alt="" width="98%" height="600px" />
+          <div className='shadow'></div>
+          <h2 className='carousel-name' >{event["name"]}</h2>
           {console.log('qaf',event.name)}
         </div>
       ))}
