@@ -21,15 +21,15 @@ function App() {
 
  return(
   <div className='bodyy'>
-    <Carousel />
+    <Carousel data={events}  />
     <div className='head'>
       <h1>Events</h1>
     </div>
     <div className='events-div'>
     {events.map((event) => (
       <div className='event' >
-   <h2>{event.name}</h2>
-   </div>
+        
+      </div>
 ))}
       
     </div>

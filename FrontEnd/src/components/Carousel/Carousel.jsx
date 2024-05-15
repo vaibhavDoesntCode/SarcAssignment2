@@ -3,7 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Carousel = () => {
+const Carousel = (data) => {
+  console.log("scasc",data.data)
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -33,17 +35,18 @@ const Carousel = () => {
     ]
   };
 
+
   return (
     <Slider {...settings}>
-      <div>
-        <h3>Slide 1</h3>
-      </div>
-      <div>
-        <h3>Slide 2</h3>
-      </div>
-      <div>
-        <h3>Slide 3</h3>
-      </div>
+      {data.data.map((event, index) => (
+        <div className='carousel-div' key={index}>
+          <img src={event.image} alt="" />
+          <h2>{event["name"]}</h2>
+          {console.log('qaf',event.name)}
+        </div>
+      ))}
+
+      
       {/* Add more slides as needed */}
     </Slider>
   );
