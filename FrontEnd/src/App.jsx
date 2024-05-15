@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Carousel from './components/Carousel/Carousel'
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -20,6 +21,7 @@ function App() {
 
  return(
   <div className='bodyy'>
+    <Carousel />
     <div className='head'>
       <h1>Events</h1>
     </div>
