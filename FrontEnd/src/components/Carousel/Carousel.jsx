@@ -23,11 +23,11 @@ const Carousel = (data) => {
     <Slider {...settings} className='random' >
       {data.data.map((event, index) => (
         <div className='carousel-div' key={index}>
-          <div className='sarc-logo' ></div>
+          {/* <div className='sarc-logo' ></div> */}
 
-          <img className='carousel-image'  src={event.image} alt="" width="98%" height="600px" />
-          <div className='shadow'></div>
-          <div className='shadow2'></div>
+          <img className='carousel-image'  src={event.image} alt="" width="100%" height="400px" />
+          {/* <div className='shadow'></div> */}
+          {/* <div className='shadow2'></div> */}
           <h2 className='carousel-name' >{event["name"]}</h2>
           {console.log('qaf',event.name)}
         </div>

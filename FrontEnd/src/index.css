@@ -1,6 +1,6 @@
 #root{
- background-color: #212121;
- background-image: url(./assets/pxfuel.jpg);
+ /* background-color: #212121; */
+ /* background-image: url(./assets/pxfuel.jpg); */
  background-blend-mode:darken;
  height: 150vh;
  width: 100vx;
@@ -31,3 +31,15 @@
 *{
     font-family: 'Roboto';
 }
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }

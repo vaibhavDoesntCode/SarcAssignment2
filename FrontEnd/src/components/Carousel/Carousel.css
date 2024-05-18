@@ -1,25 +1,24 @@
 .carousel-div {
-    position: relative;
-    padding: 1%;
-    box-shadow: 20px 40px 20px white;
-    
+    height: 400px;
+  width: 60%;
   }
-  
+
 
   .slick-slider{
-    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    /* box-shadow: 20px 20px 20px rgb(0, 0, 0); */
     animation-name: slideIn;
     animation-duration: 0.75s;
+    width: 60%;
+    margin-left: 35%;
+    margin-top: 5%;
   }
   .carousel-name {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    
-    margin-bottom: 10px;
+    right: 50%;
 
     color: white;
     font-family: '3dFont';
+    z-index: 5;
     font-size: 50px;
 
     
@@ -27,12 +26,13 @@
     
   }
 
+
   .shadow{
     position: absolute;
     bottom: 0px;
     left: 10px;
     height: 650px;
-    width: 100%;
+    width: 60%;
     background: radial-gradient(
         farthest-corner at 0 100%,
          rgb(0, 0, 0) 0%,
@@ -45,12 +45,10 @@
     top: 15px;
     right: 10px;
     height: 600px;
-    width: 100%;
+    width: 60%;
     background: radial-gradient(
         farthest-corner at 100% 0,
          rgba(255, 255, 255, 0.584) 0%,
           rgba(255,255,255,0) 15%);
   }
 
-  
-  
