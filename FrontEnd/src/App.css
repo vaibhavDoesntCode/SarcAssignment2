@@ -112,6 +112,7 @@
     padding: 0 35px;
     width: 100%;
     overflow-x:scroll;
+    margin-top: 45px;
     
   }
 
@@ -204,15 +205,16 @@
   }
   
   .heading{
-    color: #ad8c6b;
+    color: #3f2c19;
     margin-left: 3%;
     animation: fadeIn 2s ease forwards;
+    display: flex;
   }
   .horizontal-rule{
     width: 96%;
     margin-left: 2%;
     height: 5px;
-    background-color: #ad8c6b;
+    background-color: #3f2c19;
     margin-bottom: 16px;
     animation-name: slideIn;
     animation-duration: 0.5s;
@@ -230,3 +232,14 @@
     left: 10.5%;
     top: 48.5%;
   }
+
+  .sarc-logo{
+    background-image: url(./assets/sarclogo.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5px;
+    left: 12.5%;
+}

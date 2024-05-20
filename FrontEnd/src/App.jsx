@@ -33,11 +33,14 @@ function App() {
 
  return(
   <div className='bodyy'>
+    <h1 className='heading' >Events of  <div className='sarc-logo' ></div>   </h1>
+    <div className='horizontal-rule' ></div>
+    <div className='heading-page' ></div>
     <Carousel data={events}  />
     
     <div className='head'>
-      <h1 className='heading' >Events  </h1>
-      <div className='horizontal-rule' ></div>
+      
+      
     </div>
     <div className='events-div'>
     {events.map((event) => (
