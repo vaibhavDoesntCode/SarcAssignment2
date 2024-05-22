@@ -1,6 +1,7 @@
 .carousel-div {
     height: 400px;
   width: 60%;
+
   
   }
 
@@ -14,6 +15,9 @@
     border: 4px #36291c solid;
     margin-top: 5%;
     box-shadow: #ab977c -10px  10px 10px;
+   height: 405px;
+
+    overflow: hidden;
     
   }
   .carousel-name {
@@ -33,14 +37,21 @@
     position: absolute;
     top: 0;
     height: 410px;
-    width: 700px;
+    z-index: 4;
+    width: 900px;
     /* background-color: red; */
     background: radial-gradient(
-        farthest-corner at 0 100%,
-         rgba(0, 0, 0, 50) 0%,
-         rgb(0,0,0,25) 15%,
-          rgba(0,0,0,0) 100%);
+    farthest-corner at 0 100%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 15%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0) 100%
+);
   }
 
+  .carousel-image{
+    object-fit: cover;
+    height: 405px;
+  }
 
 
